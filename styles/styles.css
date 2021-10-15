@@ -139,9 +139,9 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -177,6 +177,9 @@ table {
 
 .main {
   text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -198,7 +201,112 @@ table {
 
 .footer {
   text-align: center;
+  width: 100%;
   position: relative;
-  bottom: -50px;
+  bottom: -80px;
+}
+
+@media screen and (min-width: 320px) {
+  .header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .logo {
+    max-width: 150px;
+  }
+  .header .iconsSocialNetwork {
+    max-width: 15px;
+    margin: 0 10px;
+  }
+  .main {
+    height: 70vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: center;
+    max-width: 320px;
+  }
+  .main h1 {
+    font-size: 1.5em;
+    margin: 80px 0 20px 0;
+  }
+  .main p {
+    margin: 0;
+    padding: 10px;
+  }
+  .main .imgBG {
+    padding-top: 25px;
+    max-width: 260px;
+  }
+  .footer {
+    font-size: 0.8em;
+    top: -30%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .header .logo {
+    max-width: 180px;
+  }
+  .header .iconsSocialNetwork {
+    max-width: 20px;
+  }
+  .main {
+    max-width: 720px;
+  }
+  .main h1 {
+    font-size: 2em;
+  }
+  .main .imgBG {
+    max-width: 320px;
+  }
+  .footer {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 980px;
+  }
+  .header .iconsSocialNetwork {
+    max-width: 25px;
+  }
+  .header .iconsSocialNetwork:hover {
+    -webkit-filter: invert(50%);
+            filter: invert(50%);
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+  }
+  .main {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
